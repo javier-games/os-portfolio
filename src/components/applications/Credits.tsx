@@ -12,14 +12,14 @@ const CREDITS = [
             ['Javier García Implementation', 'Based in the Henry Heffernan OS project.']
         ],
     },
-    // {
-    //     title: 'Modeling & Texturing',
-    //     rows: [
-    //         ['Henry Heffernan', 'Texturing, Composition, & UV'],
-    //         ['Mickael Boitte', 'Computer Model'],
-    //         ['Sean Nicolas', 'Environment Models'],
-    //     ],
-    // },
+    {
+        title: 'Modeling & Texturing',
+        rows: [
+            ['Henry Heffernan', 'Texturing, Composition, & UV'],
+            ['Mickael Boitte', 'Computer Model'],
+            ['Sean Nicolas', 'Environment Models'],
+        ],
+    },
     {
         title: 'Sound Design',
         rows: [
@@ -27,22 +27,7 @@ const CREDITS = [
             // ['Sound Cassette', 'Office Ambience'],
             ['Windows 95 Startup Sound', 'Microsoft'],
         ],
-    },
-    // {
-    //     title: 'Special Thanks',
-    //     rows: [
-    //         ['Bruno Simon', 'SimonDev'],
-    //         ['Lorelei Kravinsky', 'Scott Bass'],
-    //         ['Trey Briccetti', 'Mom, Dad & Angela'],
-    //     ],
-    // },
-    // {
-    //     title: 'Inspiration',
-    //     rows: [
-    //         ['Bruno Simon', 'Jesse Zhou'],
-    //         ['Pink Yellow', 'Vivek Patel'],
-    //     ],
-    // },
+    }
 ];
 
 const Credits: React.FC<CreditsProps> = (props) => {
