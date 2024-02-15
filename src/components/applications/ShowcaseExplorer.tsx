@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../showcase/Home';
+import About from '../showcase/About';
 import Window from '../os/Window';
 import useInitialWindowSize from '../../hooks/useInitialWindowSize';
+import Projects from '../showcase/Work';
 
 export interface ShowcaseExplorerProps extends WindowAppProps {}
 
@@ -25,7 +26,8 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
             <Router>
                 <div className="site-page">
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="" element={<About/>} />
+                        <Route path='/Work' element={<Projects/>}/>
                     </Routes>
                 </div>
             </Router>

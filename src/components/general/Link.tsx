@@ -13,7 +13,7 @@ export interface LinkProps {
 const Link: React.FC<LinkProps> = (props) => {
     const navigate = useNavigate();
 
-    // get current location of react router
+    // get current location of React router
     const location = useLocation();
     const [isHere, setIsHere] = useState(false);
 
@@ -54,17 +54,20 @@ const Link: React.FC<LinkProps> = (props) => {
             onMouseDown={handleClick}
             style={Object.assign({}, { display: 'flex' }, props.containerStyle)}
         >
-            {isHere && <div style={styles.hereIndicator} />}
-            <h4
-                className="router-link"
-                style={Object.assign(
-                    {},
-                    styles.link,
-                    active && { color: 'red' }
-                )}
-            >
-                {props.text}
-            </h4>
+            {/*{isHere && <div style={styles.navButtonOn} />}*/}
+            {/*<h4*/}
+            {/*    className="router-link"*/}
+            {/*    style={Object.assign(*/}
+            {/*        {},*/}
+            {/*        styles.link,*/}
+            {/*        active && { color: 'red' }*/}
+            {/*    )}*/}
+            {/*>*/}
+            {/*    {props.text}*/}
+            {/*</h4>*/}
+            <li style={styles.navItem}>
+                <button style={isHere ? styles.navButtonOn: styles.navButton}>{props.text}</button>
+            </li>
         </RouterLink>
     );
 };
@@ -75,16 +78,36 @@ const styles: StyleSheetCSS = {
         fontWeight: 'bolder',
         textDecoration: 'underline',
     },
-    hereIndicator: {
-        width: 4,
-        height: 4,
-        borderWidth: 3,
-        borderStyle: 'solid',
-        borderColor: 'rgb(85, 26, 139)',
-        alignSelf: 'center',
-        borderRadius: '50%',
-        marginRight: 6,
-        textDecoration: 'none',
+    navItem: {
+        width: '100%',
+        height: '100%',
+    },
+    navButton: {
+        fontFamily: 'MSSerif',
+        background: 'inherit',
+        color: '#333333',
+        height: '100%',
+        width: '100%',
+        padding: '0',
+        margin: '0',
+        border: 'none',
+        cursor: 'pointer',
+        font: 'inherit',
+        fontSize: '20px',
+        textAlign: 'center',
+    },
+    navButtonOn:{
+        fontFamily: 'MSSerif',
+        background: '#050505',
+        color: 'white',
+        height: '100%',
+        width: '100%',
+        padding: '0',
+        margin: '0',
+        border: 'none',
+        cursor: 'pointer',
+        font: 'inherit',
+        fontSize: '20px'
     },
 };
 
